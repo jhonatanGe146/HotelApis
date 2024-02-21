@@ -6,10 +6,10 @@ router = routers.DefaultRouter()
 router.register(r'usuarios', views.UsuarioViewSet)
 router.register(r'tipousuario', views.TipoUsuarioViewSet)
 router.register(r'tipodoc', views.TipoDocumentoViewSet)
+router.register(r'estadousuario', views.EstadoUsuarioViewSet) 
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-      
+    path('', include(router.urls)),     
 ]
 

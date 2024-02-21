@@ -1,17 +1,13 @@
 from rest_framework import serializers
-from .models import persona, tipo_documento, tipo_persona
+from .models import tipo_servicio, producto
 
-class UsuarioSerializer(serializers.ModelSerializer):
+class TipoServicioSerializer(serializers.ModelSerializer):
     class Meta:
-        model = persona
+        model = tipo_servicio
         fields = "__all__"
 
-class TipoUsuarioSerializer(serializers.ModelSerializer):
+class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = tipo_persona
+        model = producto
         fields = "__all__"
 
-class TipoDocumentoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = tipo_documento
-        fields = "__all__"

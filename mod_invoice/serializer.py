@@ -1,18 +1,23 @@
 from rest_framework import serializers
-from .models import Factura,DetallesFactura,MetodoPago
+from .models import metodo_pago, metodopago_factura, factura, detalles_factura
 
 class FacturaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Factura
+        model = factura
         fields = "__all__"
 
 class DetallesFacturaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DetallesFactura
+        model = detalles_factura
         fields = "__all__"
 
-class MetodosPagoSerializer(serializers.ModelSerializer):
+class MetodoPagoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = MetodoPago
+        model = metodo_pago
+        fields = "__all__"
+
+class MetodoPago_FacturaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = metodopago_factura
         fields = "__all__"
 

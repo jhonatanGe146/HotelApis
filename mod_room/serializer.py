@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import habitacion, estado_habitacion, tipo_habitacion, inventario, inventario_habitacion
+from .models import habitacion, estado_habitacion, tipo_habitacion, inventario_habitacion
 
 class HabitacionSerializer(serializers.ModelSerializer):
     class Meta:

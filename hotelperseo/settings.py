@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'mod_reservation.apps.ModReservationConfig',
     'mod_inventory.apps.ModInventoryConfig',
     'mod_guest.apps.ModGuestConfig',
+    'mod_service.apps.ModServiceConfig',
     'rest_framework',
     'coreapi',
     'corsheaders'
@@ -90,7 +91,7 @@ DATABASES = {
            'ENGINE': 'django.db.backends.mysql',
            'NAME': 'hotel',
            'USER': 'root',
-           'PASSWORD': 'pass',
+           'PASSWORD': '',
            'HOST': 'localhost',
            'PORT': '3306',
        }

@@ -3,7 +3,7 @@ from mod_inventory.models import inventario
 
 # Create your models here.
 class estado_habitacion(models.Model):
-    IDESTADOHABITACION =  models.AutoField(primary_key=True)
+    IDESTADOHABITACION =  models.AutoField(primary_key=True, null=False)
     TIPO_ESTADO = models.CharField(max_length=20)
     DESCRIPCION = models.TextField(max_length=200)
  
@@ -13,7 +13,7 @@ class estado_habitacion(models.Model):
  
 
 class tipo_habitacion(models.Model):
-    IDTIPOHABITACION = models.AutoField(primary_key=True) 
+    IDTIPOHABITACION = models.AutoField(primary_key=True, null=False) 
     TIPO_HABITACION = models.CharField(max_length=30)
     DESCRIPCION = models.TextField(max_length=200)
     PRECIOXNOCHE = models.FloatField()
@@ -26,7 +26,7 @@ class tipo_habitacion(models.Model):
 
 
 class habitacion(models.Model):
-    NROHABITACION = models.CharField(max_length=4, primary_key=True)
+    NROHABITACION = models.CharField(max_length=4, primary_key=True, null=False)
     ESTADO_HABITACION_IDESTADOHABITACION = models.ForeignKey(
         estado_habitacion,
         on_delete=models.PROTECT,
@@ -40,7 +40,7 @@ class habitacion(models.Model):
         return self.NROHABITACION
 
 class inventario_habitacion (models.Model):
-    ID_INVENTARIO_HABITACION =  models.AutoField(primary_key=True)
+    ID_INVENTARIO_HABITACION =  models.AutoField(primary_key=True, null=False)
     
     INVENTARIO_IDINVENTARIO = models.ForeignKey(
         inventario, 
